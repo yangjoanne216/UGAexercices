@@ -135,7 +135,7 @@ public class AnalyseOccurrence {
 		comboBox = new JComboBox();
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lbl4.setText("A");
+				//lbl4.setText("A");
 			}
 		});
 		comboBox.removeAllItems();
