@@ -8,23 +8,25 @@ public class Navire {
 	private Coordonnee[] partiesTouchees; 
 	private int nbTouchees = 0;
 	
-	public Navire(Coordonnee debut, int longueur, boolean
-			estVertical) {
+	public Navire(Coordonnee debut, int longueur, boolean estVertical) {
 		this.debut = debut;
-		nbTouchees = 0;
+		this.nbTouchees = 0;
 		this.partiesTouchees = new Coordonnee [longueur];
 		if (estVertical == true)
 		{
-			this.fin = new Coordonnee (debut.getLigne()+longueur-1,debut.getColonne());
+			this.fin = new Coordonnee (debut.getColonne(),debut.getLigne()+longueur-1);
 			}
 		else
 		{
-			this.fin = new Coordonnee (debut.getLigne(),debut.getColonne()+longueur-1);
+			this.fin = new Coordonnee (debut.getColonne()+longueur-1,debut.getLigne());
 		}
 		
 	}
 	
-	 public String toString() {
+	 /**
+	 *
+	 */
+	public String toString() {
 		 return "{Navire début = "+ debut + ", fin = "+ fin + ", parties touchées = "+Arrays.toString(Arrays.copyOf(partiesTouchees, nbTouchees))+ "}"; 
 	 }
 	
@@ -72,7 +74,7 @@ public class Navire {
 	 
 	 public boolean estTouche(Coordonnee c)
 	 {
-		 for(int i = 0; i< partiesTouchees.length&&partiesTouchees[i]!=null;i++)
+		 for(int i = 0; i<nbTouchees;i++)
 		 {
 			 if(c.getColonne() == partiesTouchees[i].getColonne() && c.getLigne() == partiesTouchees[i].getLigne())
 				 return true;
@@ -86,15 +88,8 @@ public class Navire {
 		 //java中给一个一维表格添加新的元素
 		 if(this.contient(c)&&this.estTouche(c)== false)
 		 {
-			 for(int i = 0; i< partiesTouchees.length;i++)
-			 {
-				 if(partiesTouchees[i] == null)
-				 {
-					 partiesTouchees[i]=c;
-					 nbTouchees++;
-					 break;
-				 }
-			 }
+			partiesTouchees[nbTouchees]=c;
+			nbTouchees++;
 		 }
 			 
 	 }
