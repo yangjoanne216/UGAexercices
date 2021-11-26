@@ -14,9 +14,9 @@ public class GrilleNavaleGraphique extends GrilleNavale{
 		return grilleGraphique;
 	}
 	
-	public boolean ajouteNavire(Navire n) {
-		
-	}
+//	public boolean ajouteNavire(Navire n) {
+//		
+//	}
 	
 
 }
