@@ -24,7 +24,7 @@ public Coordonnee(String coordonnee)
 	
 }
 
-public Coordonnee(int colone, int ligne)
+public Coordonnee(int colonne, int ligne)
 {
 	this.ligne=ligne;
 	this.colonne=colonne;
