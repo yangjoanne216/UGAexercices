@@ -31,25 +31,32 @@ public class BatailleNavale {
 		initFenetre(nomJoueur, grilleAttaque,grilleJoueur.getGrilleGraphique());
 		return new JoueurGraphique(grilleJoueur,grilleAttaque);
 	}*/
-	
+	public static JoueurGraphique initJoueur(String nomJoueur) {
+		GrilleGraphique grilleAttaque = new GrilleGraphique(10); 
+		GrilleNavaleGraphique grilleJoueur = new GrilleNavaleGraphique(10); 
+		grilleJoueur.placementAuto(new int[]{5,4,3,3,2,2}); 
+		initFenetre(nomJoueur, grilleAttaque,grilleJoueur.getGrilleGraphique()); 
+		return new JoueurGraphique(grilleJoueur,grilleAttaque);
+		}
 	
 	public static void main(String[] args) {
 		
-
-		GrilleGraphique grilleAttaque = new GrilleGraphique(10); 
-		GrilleNavaleGraphique grilleJoueur = new GrilleNavaleGraphique(10); 
-		grilleJoueur.placementAuto(new int[]{5,4,3,3,2,2});
-		//initFenetre("Joueur 1", grilleAttaque,grilleJoueur.getGrilleGraphique());
+//
+//		GrilleGraphique grilleAttaque = new GrilleGraphique(10); 
+//		GrilleNavaleGraphique grilleJoueur = new GrilleNavaleGraphique(10); 
+//		grilleJoueur.placementAuto(new int[]{7,6,5,4,3,2,1});
+//		initFenetre("Joueur 1", grilleAttaque,grilleJoueur.getGrilleGraphique());
+//		
+		GrilleGraphique grilleAttaque = new GrilleGraphique(10);
+		GrilleGraphique grilleJoueur = new GrilleGraphique(10);
 		
-//		GrilleGraphique grilleAttaque = new GrilleGraphique(10);
-//		GrilleGraphique grilleJoueur = new GrilleGraphique(10);
-//		
-//		initFenetre("Joueur 1", grilleAttaque, grilleJoueur );
-//		
-		/*Joueur j1 = initJoueur("Joueur 1");
+		//initFenetre("Joueur 1", grilleAttaque, grilleJoueur );
+		
+		Joueur j1 = initJoueur("Joueur 1");
 		Joueur j2 = initJoueur("Joueur 2");
 		
-		j1.jouerAvec(j2);*/
+		j1.jouerAvec(j2);
+		j1.choisirAttaque();
 		
 		
 

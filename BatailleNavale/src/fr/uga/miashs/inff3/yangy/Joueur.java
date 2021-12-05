@@ -9,8 +9,8 @@ public abstract class Joueur {
 	private String prenom;
 	
 	/**
-	 * L'adversaire du joueur courant. Cet attribut ne sera pas initialisÃ© dans le constructeur 
-	 * mais dans la mÃ©thode <code>jouerAvec(Joueur a)</code>
+	 * L'adversaire du joueur courant. Cet attribut ne sera pas initialisé dans le constructeur 
+	 * mais dans la méthode <code>jouerAvec(Joueur a)</code>
 	 */
 	private Joueur adversaire;
 	
@@ -46,7 +46,7 @@ public abstract class Joueur {
 	}
 	
 	/**
-	 * retourne le prÃ©nom du joueur
+	 * retourne le prénom du joueur
 	 * @return le prenom du joueur
 	 */
 	public String getPrenom() {
@@ -54,9 +54,9 @@ public abstract class Joueur {
 	}
 	
 	/**
-	 * Cette mÃ©thode intialise l'attribut adversaire de l'instance courante avec le Joueur passÃ© en paramÃ¨tre.
-	 * Elle fait de mÃªme pour l'adversaire : l'adversaire de a va Ãªtre le joueur courant.
-	 * Finalement elle appelle les mÃ©thode <code>initPartie(int tailleGrilleAdversaire);</code> pour le joueur courant et pour l'adversaire
+	 * Cette méthode intialise l'attribut adversaire de l'instance courante avec le Joueur passé en paramètre.
+	 * Elle fait de même pour l'adversaire : l'adversaire de a va être le joueur courant.
+	 * Finalement elle appelle les méthode <code>initPartie(int tailleGrilleAdversaire);</code> pour le joueur courant et pour l'adversaire
 	 * @param a l'aderversaire contre qui le joueur va jouer
 	 */
 	public void jouerAvec(Joueur a) {
@@ -86,31 +86,31 @@ public abstract class Joueur {
 	}
 	
 	/**
-	 * MÃ©thode appelÃ©e Ã  chaque retour d'attaque portÃ©e par ce joueur sur son adversaire
-	 * @param c La coordonnÃ©e attaquÃ©e sur la grille de l'adversaire
-	 * @param etat Etat de l'attaque portÃ©e qui peut Ãªtre Ã©gal au constantes <code>Joueur.TOUCHE</code>, <code>Joueur.COULE</code>, ou <code>Joueur.A_L_EAU</code>
+	 * Méthode appelée à chaque retour d'attaque portée par ce joueur sur son adversaire
+	 * @param c La coordonnée attaquée sur la grille de l'adversaire
+	 * @param etat Etat de l'attaque portée qui peut être égal au constantes <code>Joueur.TOUCHE</code>, <code>Joueur.COULE</code>, ou <code>Joueur.A_L_EAU</code>
 	 */
 	protected abstract void retourAttaque(Coordonnee c, int etat);
 	
 	/**
-	 * MÃ©thode appelÃ©e Ã  chaque retour d'attaque portÃ© par l'adversaire sur ce Joueur
-	 * @param c La coordonnÃ©e attaquÃ©e par l'adversaire
-	 * @param etat Etat de l'attaque reÃ§ue qui peut Ãªtre Ã©gal au constantes <code>Joueur.TOUCHE</code>, <code>Joueur.COULE</code>, ou <code>Joueur.A_L_EAU</code>
+	 * Méthode appelée à chaque retour d'attaque portée par l'adversaire sur ce Joueur
+	 * @param c La coordonnée attaquée par l'adversaire
+	 * @param etat Etat de l'attaque reçue qui peut être égal au constantes <code>Joueur.TOUCHE</code>, <code>Joueur.COULE</code>, ou <code>Joueur.A_L_EAU</code>
 	 */
 	protected abstract void retourDefense(Coordonnee c, int etat);
 	
 	/**
-	 * MÃ©thode appelÃ©e lorsque c'est au tour de ce joueur de jouer. 
-	 * Elle doit retourner la coordonnÃ©e choisie pour l'attaque
-	 * @return la coordonnee Ã  attaquer sur la grille de l'adversaire
+	 * Méthode appelée lorsque c'est au tour de ce joueur de jouer. 
+	 * Elle doit retourner la coordonnée choisie pour l'attaque
+	 * @return la coordonnee à  attaquer sur la grille de l'adversaire
 	 */
 	public abstract Coordonnee choisirAttaque();
 	
 	/**
-	 * MÃ©thode de dÃ©fense. Cette mÃ©thode est appelÃ©e lorsqu'une attaque de l'adversaire est reÃ§ue.
+	 * Méthode de défense. Cette méthode est appelée lorsqu'une attaque de l'adversaire est reçue.
 	 * En focntion de l'impact de l'attaque, elle retourne un entier qui peut prendre les valeurs suivantes :
 	 * Joueur.TOUCHE, Joueur.COULE, Joueur.A_L_EAU, Joueur.GAME_OVER
-	 * @param c la cordonnÃ©e attaquÃ©e
+	 * @param c la cordonnée attaquée
 	 * @return le resultat de cette attaque: Joueur.TOUCHE, Joueur.COULE, Joueur.A_L_EAU ou Joueur.GAME_OVER
 	 */
 	public abstract int defendre(Coordonnee c);

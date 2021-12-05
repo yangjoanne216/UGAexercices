@@ -95,7 +95,8 @@ public class Espace {
 				{
 					c = (char) ('A'+i);
 				}
-				sb.setCharAt((cases[i].getOrdonnee()*(largeur+1))+cases[i].getAbscisse(),c);
+//				sb.setCharAt((cases[i].getOrdonnee()*(largeur-1))+cases[i].getAbscisse(),c);
+				sb.setCharAt((cases[i].getOrdonnee()*largeur)+cases[i].getAbscisse()-1,c);
 			}
 		}
 		return sb.toString();

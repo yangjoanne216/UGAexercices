@@ -260,8 +260,8 @@ public class GrilleNavale {
 		System.out.println("H8 在grilleNavale "+grilleNavale1.estDansTirsRecus(dansHuite));
 
 		System.out.println((int)(Math.random()*100%7));
-		grilleNavale1.placementAuto(new int[]{5,4,3});
-		for(int i=0; i<3; i++)
+		grilleNavale1.placementAuto(new int[]{2,3,4,4});
+		for(int i=0; i<4; i++)
 		{
 			System.out.println(grilleNavale1.navires[i].toString());
 		}
