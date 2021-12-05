@@ -29,7 +29,7 @@ public class JoueurGraphique extends Joueur {
 			break;
 		case TOUCHE:
 			grilleDuTirs.colorie(c, Color.red);
-			JOptionPane.showMessageDialog(grilleDuTirs, "un navire est touché en "+c.toString());
+			JOptionPane.showMessageDialog(grilleDuTirs, "vous avez touché un navire en "+c.toString());
 			break;
 		case COULE:
 			grilleDuTirs.colorie(c, Color.red);
@@ -37,7 +37,7 @@ public class JoueurGraphique extends Joueur {
 			break;
 		case GAMEOVER:
 			grilleDuTirs.colorie(c, Color.red);
-			JOptionPane.showMessageDialog(grilleDuTirs, "Vous avez gagné!!!");
+			JOptionPane.showMessageDialog(grilleDuTirs, "Super! Vous avez gagné!!!");
 			break;
 		default:
 			break;
@@ -48,7 +48,21 @@ public class JoueurGraphique extends Joueur {
 	@Override
 	protected void retourDefense(Coordonnee c, int etat) {
 		// TODO Auto-generated method stub
-		
+		switch(etat) {
+		case TOUCHE:
+			JOptionPane.showMessageDialog(grilleDuTirs, "Oh,votre navire est touché en "+c.toString());
+			break;
+		case A_L_EAU:
+			break;
+		case COULE:
+			JOptionPane.showMessageDialog(grilleDuTirs, "Ohlala, votre navire est coulé en "+c.toString());
+			break;
+		case GAMEOVER:
+			JOptionPane.showMessageDialog(grilleDuTirs, "Sorry,Vous avez perdu");
+			break;
+		default:
+			break;
+		}
 	}
 
 	@Override

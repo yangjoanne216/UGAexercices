@@ -11,8 +11,8 @@ import fr.uga.miashs.inff3.yangy.Coordonnee;
 class testCoordonnee {
 	
 	Coordonnee A1 = new Coordonnee("A1");
-	Coordonnee B1 = new Coordonnee(1,0);
-	Coordonnee B1plus = new Coordonnee(1,0);
+	Coordonnee B1 = new Coordonnee(0,1);
+	Coordonnee B1plus = new Coordonnee(0,1);
 	Coordonnee  B2 = new Coordonnee(1,1);
 	Coordonnee A2 = new Coordonnee("A2");
 	Coordonnee A2plus = new Coordonnee("A2");

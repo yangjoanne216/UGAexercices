@@ -79,20 +79,37 @@ public class GrilleNavale {
 	 * @param taillesNavires tableau donnant les tailles des navires à créer
 	et à placer dans la grille
     */
+//	public void placementAuto(int[] taillesNavires) {
+//	//一艘船一艘船的放置
+//		for(int i = 0; i < taillesNavires.length; i++) {
+//			boolean result = false;
+//			//当成功放置好船后跳出本次循环进入下一次循环
+//			while (result == false)
+//			{   
+//				Random random = new Random();
+//				Coordonnee debut = new Coordonnee((int)(Math.random()*100%tailleGrille),(int)(Math.random()*100%tailleGrille));
+//				result = ajouteNavire(new Navire(debut,taillesNavires[i],random.nextBoolean()));
+//			}
+//				
+//		}
+//		
+//	}
+	
 	public void placementAuto(int[] taillesNavires) {
-	//一艘船一艘船的放置
-		for(int i = 0; i < taillesNavires.length; i++) {
-			boolean result = false;
-			//当成功放置好船后跳出本次循环进入下一次循环
-			while (result == false)
-			{   
-				Random random = new Random();
-				Coordonnee debut = new Coordonnee((int)(Math.random()*100%tailleGrille),(int)(Math.random()*100%tailleGrille));
-				result = ajouteNavire(new Navire(debut,taillesNavires[i],random.nextBoolean()));
-			}
+		for(int i=0; i<taillesNavires.length;i++) {
+			Navire n = null;
+			do {
+				int c1 = (int)(Math.random()*tailleGrille);
+				int c2 = (int)(Math.random()*(tailleGrille-taillesNavires[i]-1));
 				
+				if(Math.random()<0.5) {
+					n = new Navire(new Coordonnee(c1,c2),taillesNavires[i],false); 
+				}
+				else {
+					n = new Navire(new Coordonnee(c1,c2),taillesNavires[i],true); 
+				}
+			}while(!ajouteNavire(n));
 		}
-		
 	}
 	
 	/**

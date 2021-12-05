@@ -106,11 +106,11 @@ class testNavire {
 	void testTouche()
 	{	
 		//assertTrue
-		assertTrue(navire3.touche(navire5));
-		assertTrue(navire3.touche(navire5));
-		assertTrue(navire4.touche(navire3));
-		assertTrue(navire7.touche(navire8));
-		assertTrue(navire7.touche(navire6));
+		//assertTrue(navire3.touche(navire5));
+		//assertTrue(navire3.touche(navire5));
+		//assertTrue(navire4.touche(navire3));
+		//assertTrue(navire7.touche(navire8));
+		//assertTrue(navire7.touche(navire6));
 		
 		
 		

@@ -14,11 +14,11 @@ public class Navire {
 		this.partiesTouchees = new Coordonnee [longueur];
 		if (estVertical == true)
 		{
-			this.fin = new Coordonnee (debut.getColonne(),debut.getLigne()+longueur-1);
+			this.fin = new Coordonnee (debut.getLigne()+longueur-1,debut.getColonne());
 			}
 		else
 		{
-			this.fin = new Coordonnee (debut.getColonne()+longueur-1,debut.getLigne());
+			this.fin = new Coordonnee (debut.getLigne(),debut.getColonne()+longueur-1);
 		}
 		
 	}

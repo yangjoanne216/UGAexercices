@@ -27,10 +27,10 @@ class TestGrilleNavale {
 	
 	Coordonnee B2 = new Coordonnee (1,1);
 	Coordonnee H8 = new Coordonnee (7,7);
-	Coordonnee A8 = new Coordonnee (0,7);
+	Coordonnee A8 = new Coordonnee (7,0);
 	
-	Coordonnee H9 = new Coordonnee (7,8);
-	Coordonnee I4 = new Coordonnee (8,4);
+	Coordonnee H9 = new Coordonnee (8,7);
+	Coordonnee I4 = new Coordonnee (3,8);
 	
 	
 	Coordonnee dansUn = new Coordonnee("C2");
